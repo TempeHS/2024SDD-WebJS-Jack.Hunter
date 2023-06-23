@@ -8,8 +8,8 @@ var timerId = 0;
 
 function gameLoop() {
     equalityCheck(Math.floor(Math.random() * 10) + 1);
-    updateHtmlContent();
     secondCountDown();
+    updateHtmlContent();
 }
 
 function equalityCheck(randomNumber) {
@@ -35,6 +35,7 @@ function updateHtmlContent() {
     document.getElementById("playerScoreContent").innerHTML = playerScore;
     document.getElementById("computerScoreContent").innerHTML = computerScore;
     document.getElementById("tipContent").innerHTML = playerTip;
+    document.getElementById("countDown").innerHTML = currentSecond;
 }
 
 function secondCountDown() {
