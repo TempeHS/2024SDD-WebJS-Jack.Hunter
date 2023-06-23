@@ -39,5 +39,10 @@ function updateHtmlContent() {
 }
 
 function secondCountDown() {
+    if (currentSecond != 0) {
+        currentSecond--;
 
+    } else {
+
+    }
 }
