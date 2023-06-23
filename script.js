@@ -39,6 +39,5 @@ function updateHtmlContent() {
 }
 
 function secondCountDown() {
-    document.getElementById("countDown").innerHTML = currentSecond;
-    alert(currentSecond);
+
 }
