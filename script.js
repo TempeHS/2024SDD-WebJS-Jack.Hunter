@@ -10,7 +10,7 @@ var timerId = 0;
 function gameLoop() {
     equalityCheck();
     if (currentSecond = 0) {
-        computerScore = Math.floor(Math.random() * 10) + 1;
+        randomNumber = Math.floor(Math.random() * 10) + 1;
         secondCountDown();
     }
     updateHtmlContent();
