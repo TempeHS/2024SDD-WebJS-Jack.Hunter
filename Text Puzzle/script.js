@@ -10,10 +10,11 @@
 var x = document.getElementById("playerWin");
 x.style.display = "block";
 var redValue = 255;
-var blueValue = 0;
-var greenValue = 0;
+var blueValue = 255;
+var greenValue = 255;
+x.style.color = "rgb(" + redValue + ", " + blueValue + ", " + greenValue + ")";
 var timerId = 0;
-changeCoulor();
+var currentId = 0;
 function changeCoulor() {
     x.style.color = "rgb(" + redValue + ", " + blueValue + ", " + greenValue + ")";
     if (redValue == 255 && greenValue != 255 && blueValue == 0) {
@@ -30,4 +31,17 @@ function changeCoulor() {
         blueValue--;
     }
     timerId = setTimeout("changeCoulor()", 1);
+}
+
+function clue(id) {
+    if (currentId + 1 == id) {
+        currentId++;
+        document.getElementById(id).style.fontWeight = 800;
+        if (currentId == 3) {
+            redValue = 255;
+            blueValue = 0;
+            greenValue = 0;
+            changeCoulor();
+        }
+    }
 }
