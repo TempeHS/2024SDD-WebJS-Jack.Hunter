@@ -8,10 +8,10 @@
 //**********************************************************************************
 
 var x = document.getElementById("playerWin");
-x.style.display = "block";
+x.style.display = "none";
 var redValue = 255;
-var blueValue = 255;
-var greenValue = 255;
+var blueValue = 0;
+var greenValue = 0;
 x.style.color = "rgb(" + redValue + ", " + blueValue + ", " + greenValue + ")";
 var timerId = 0;
 var currentId = 0;
@@ -38,9 +38,7 @@ function clue(id) {
         currentId++;
         document.getElementById(id).style.fontWeight = 800;
         if (currentId == 3) {
-            redValue = 255;
-            blueValue = 0;
-            greenValue = 0;
+            x.style.display = "block";
             changeCoulor();
         }
     }
