@@ -12,7 +12,6 @@ x.style.display = "none";
 var redValue = 255;
 var blueValue = 0;
 var greenValue = 0;
-x.style.color = "rgb(" + redValue + ", " + blueValue + ", " + greenValue + ")";
 var timerId = 0;
 var currentId = 0;
 function changeCoulor() {
